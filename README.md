@@ -17,7 +17,6 @@ This project is a web application that allows users to explore astronomy-related
 ## Running the Project:
 To run the project, you need to start both the server and the client.
 
-### Server:
 Navigate to the main directory:
 
 Start the project: ``` npm run dev ```
