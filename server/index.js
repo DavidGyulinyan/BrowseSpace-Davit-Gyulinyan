@@ -14,19 +14,19 @@ const PORT = 3000;
 //middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extend:false}));
+app.use(express.urlencoded({extended:false}));
 
 // routes
 // eslint-disable-next-line no-undef
 app.use("/api/planets", planetRoute);
 
-mongoose.connect("mongodb+srv://DavidGyulinyan:ekYs7qDpvqf4239v@cluster0.6dmzay5.mongodb.net/nasa_browser?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://davidgyulinyan:dG1M44L2Dd7zKjUp@cluster0.6dmzay5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
         console.log("Connected to the database");
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });
     })
-    .catch(() => {
-        console.log("connection failed");
+    .catch((err) => {
+        console.error("connection failed:", err.message);
     });

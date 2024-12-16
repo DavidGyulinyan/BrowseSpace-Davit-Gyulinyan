@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NbaData } from "../../APIs/nbaAPI";
+import { NbaData } from "../../APIs/NbaAPI";
 import formattedDate from "../../APIs/helpers/formattedDate";
 import { Asteroid, NearEarthObjects } from "../../Models/AsteroidTypeModel";
 import { useTranslation } from "react-i18next";
